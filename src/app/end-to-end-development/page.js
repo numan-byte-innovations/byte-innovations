@@ -2,7 +2,9 @@ export const metadata = { title: "End to End Development | Byte Innovations", de
 
 const qaRows = [["Manual & Functional", "Real user journeys and feature logic validated by hand, not just scripted."], ["Automated & Regression", "Repetitive flows and critical paths automated so nothing breaks silently."], ["API & Performance", "Endpoints, integrations, and load behavior tested before release."]];
 const compareRows = ["Business requirement analysis", "Software architecture planning", "Full-cycle custom software development", "API, cloud, and system integration", "QA testing and deployment support", "Long-term maintenance and scaling"];
-function Heading({ eyebrow, title, text, center = false }) { return <div className={`e2e-heading${center ? " is-center" : ""}`}><p>{eyebrow}</p><h2>{title}</h2>{text ? <span>{text}</span> : null}</div>; }
+function Heading({ eyebrow, title, text, center = false }) {
+  return <div className={`e2e-heading${center ? " is-center" : ""}`}><p>{eyebrow}</p><h2>{title}</h2>{text ? <span>{text}</span> : null}</div>;
+}
 function Button({ children }) { return <a className="primary-button e2e-button" href="/#contact">{children}</a>; }
 
 export default function EndToEndDevelopmentPage() {

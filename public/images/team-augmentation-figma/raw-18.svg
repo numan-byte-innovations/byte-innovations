@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="pan_zoom">
+<mask id="mask0_0_665" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
+<rect id="Bounding box" width="28" height="28" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_0_665)">
+<path id="pan_zoom_2" d="M3.5 24.5V17.5H5.83333V20.5333L9.45 16.9167L11.0833 18.55L7.46667 22.1667H10.5V24.5H3.5ZM18.55 11.0833L16.9167 9.45L20.5333 5.83333H17.5V3.5H24.5V10.5H22.1667V7.46667L18.55 11.0833Z" fill="#DE1F26"/>
+</g>
+</g>
+</svg>

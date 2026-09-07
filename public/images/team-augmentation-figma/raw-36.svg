@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="health_cross">
+<mask id="mask0_0_564" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
+<rect id="Bounding box" width="40" height="40" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_0_564)">
+<path id="health_cross_2" d="M13.0642 35.3387V26.9358H4.66125V13.0642H13.0642V4.66125H26.9358V13.0642H35.3387V26.9358H26.9358V35.3387H13.0642ZM16.8558 31.5471H23.1442V23.1442H31.5471V16.8558H23.1442V8.45292H16.8558V16.8558H8.45292V23.1442H16.8558V31.5471Z" fill="#387ACE"/>
+</g>
+</g>
+</svg>
