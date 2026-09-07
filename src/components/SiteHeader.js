@@ -3,11 +3,11 @@
 import { useState } from "react";
 
 const navItems = [
-  { label: "Company", href: "#company" },
-  { label: "MVP Calculator", href: "#mvp-calculator" },
+  { label: "Company", href: "/#company" },
+  { label: "MVP Calculator", href: "/mvp-calculator" },
   {
     label: "Services",
-    href: "#services",
+    href: "/#services",
     menuType: "services",
     mega: {
       cards: [
@@ -31,12 +31,12 @@ const navItems = [
         { label: "AI & Machine Learning" },
         { label: "Enterprise Solution" },
       ],
-      cta: { label: "Book a call Now", href: "#contact" },
+      cta: { label: "Book a call Now", href: "/#contact" },
     },
   },
   {
     label: "Products",
-    href: "#products",
+    href: "/#products",
     menuType: "products",
     mega: {
       columns: [
@@ -49,12 +49,12 @@ const navItems = [
         { label: "Expert HRMS" },
         { label: "Expert ATS" },
       ],
-      cta: { label: "Book a call Now", href: "#contact" },
+      cta: { label: "Book a call Now", href: "/#contact" },
     },
   },
   {
     label: "Career",
-    href: "#career",
+    href: "/#career",
     menuType: "career",
     mega: {
       links: [
@@ -64,7 +64,7 @@ const navItems = [
       ],
     },
   },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Contact Us", href: "/#contact" },
 ];
 
 function MenuLinks({ links, href, compact = false }) {
@@ -154,7 +154,7 @@ export default function SiteHeader() {
   return (
     <header className="site-header">
       <div className="site-container nav-layout">
-        <a className="brand" href="#top" aria-label="Byte Innovations home">
+        <a className="brand" href="/" aria-label="Byte Innovations home">
           <img src="/images/byte-logo-dark.png" alt="Byte Innovations" />
         </a>
 
@@ -177,7 +177,7 @@ export default function SiteHeader() {
           ))}
         </nav>
 
-        <a className="primary-button nav-button desktop-only" href="#contact">
+        <a className="primary-button nav-button desktop-only" href="/#contact">
           Start a Project
         </a>
 
@@ -229,7 +229,7 @@ export default function SiteHeader() {
               ) : null}
             </div>
           ))}
-          <a className="primary-button mobile-cta" href="#contact" onClick={() => setMobileOpen(false)}>
+          <a className="primary-button mobile-cta" href="/#contact" onClick={() => setMobileOpen(false)}>
             Start a Project
           </a>
         </nav>
