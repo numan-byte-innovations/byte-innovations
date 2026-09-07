@@ -11,21 +11,21 @@ const navItems = [
     menuType: "services",
     mega: {
       cards: [
-        { title: "End to End Development", description: "Idea to launched product, fully built and owned by us." },
+        { title: "End to End Development", description: "Idea to launched product, fully built and owned by us.", href: "/end-to-end-development" },
         { title: "Team Augmentation", description: "A full dev team set up alongside yours in days." },
         { title: "MVP Service", description: "Idea to live product in weeks, not months." },
         { title: "AI & Machine Learning", description: "AI and machine learning solutions tailored to your business needs." },
         { title: "Enterprise Solution", description: "Zero downtime. Zero compromise. Built to scale." },
       ],
       columns: [
-        { heading: "End to End Development Service", links: ["Custom Software Development", "Web Application Development", "Mobile App Development", "SaaS Product Development", "Cloud & DevOps", "QA & Testing Services"] },
+        { heading: "End to End Development Service", href: "/end-to-end-development", links: ["Custom Software Development", "Web Application Development", "Mobile App Development", "SaaS Product Development", "Cloud & DevOps", "QA & Testing Services"] },
         { heading: "Team Augmentation", links: ["About Team Augmentation", "Benefits of Staff Augmentation", "Partnership Models", "How Our Staff Augmentation Works"] },
         { heading: "MVP Service", links: ["Product Strategy & Discovery", "UX/UI Design", "Rapid Prototyping", "Product Scaling Support", "Fractional CTO", "Dedicated Product Team", "Digital Product Development"] },
         { heading: "AI & Machine Learning", links: ["AI Strategy Development", "AI Agent Development", "AI Product Development", "Conversational AI", "RAG AI Development", "Data & LLM Engineering"] },
         { heading: "Enterprise Solutions", links: ["Digital Transformation", "Business Intelligence & Automation", "CRM & ERP Implementation", "Legacy System Modernization", "VAPT Service / Cybersecurity", "IT Audit", "RPA & Workflow Automation", "Cloud-First Transformation"] },
       ],
       links: [
-        { label: "End to End Development" },
+        { label: "End to End Development", href: "/end-to-end-development" },
         { label: "Team Augmentation" },
         { label: "MVP Service" },
         { label: "AI & Machine Learning" },
@@ -75,7 +75,7 @@ function MenuLinks({ links, href, compact = false }) {
 
         return (
         <li key={item.label}>
-          <a href={href}>
+          <a href={item.href || href}>
             <span className="mega-link-label">{item.label}</span>
             {!compact && item.description ? <span className="mega-link-description">{item.description}</span> : null}
           </a>
@@ -103,7 +103,7 @@ function DesktopDropdown({ item }) {
         <div className="mega-products-main">
           {mega.columns.map((column) => (
             <section className="mega-column" key={column.heading}>
-              <p className="mega-heading">{column.heading}</p>
+              <p className="mega-heading">{column.href ? <a href={column.href}>{column.heading}</a> : column.heading}</p>
               <MenuLinks links={column.links} href={item.href} compact />
             </section>
           ))}
@@ -120,18 +120,20 @@ function DesktopDropdown({ item }) {
       <div className="mega-services-top">
         <p className="mega-services-label">Engagement Models</p>
         <div className="mega-service-cards">
-          {mega.cards.map((card) => (
-            <article className="mega-service-card" key={card.title}>
+          {mega.cards.map((card) => {
+            const Card = card.href ? "a" : "article";
+
+            return <Card className="mega-service-card" href={card.href} key={card.title}>
               <h3>{card.title}</h3>
               <p>{card.description}</p>
-            </article>
-          ))}
+            </Card>;
+          })}
         </div>
       </div>
       <div className="mega-services-bottom">
         {mega.columns.map((column) => (
           <section className="mega-column" key={column.heading}>
-            <p className="mega-heading">{column.heading}</p>
+            <p className="mega-heading">{column.href ? <a href={column.href}>{column.heading}</a> : column.heading}</p>
             <MenuLinks links={column.links} href={item.href} compact />
           </section>
         ))}
@@ -221,7 +223,7 @@ export default function SiteHeader() {
               {item.mega ? (
                 <div className={`mobile-submenu${openSubmenu === item.label ? " is-open" : ""}`}>
                   {item.mega.links.map((link) => (
-                    <a href={item.href} key={link.label} onClick={() => setMobileOpen(false)}>
+                    <a href={link.href || item.href} key={link.label} onClick={() => setMobileOpen(false)}>
                       {link.label}
                     </a>
                   ))}

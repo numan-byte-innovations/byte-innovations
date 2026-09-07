@@ -1,6 +1,6 @@
 const footerColumns = [
   { heading: "Company", links: ["About Us", "Our Process", "Contact Us"] },
-  { heading: "Services", links: ["End to End Development", "Team Augmentation", "MVP Service", "Enterprise Solution"] },
+  { heading: "Services", links: [{ label: "End to End Development", href: "/end-to-end-development" }, "Team Augmentation", "MVP Service", "Enterprise Solution"] },
   { heading: "Products", links: ["Expert POS", "Expert ERP", "ExpertHRMS", "ExpertATS"] },
   { heading: "Career", links: ["Why Join Us", "Job Openings", "Submit Your Profile"] },
 ];
@@ -19,11 +19,13 @@ export default function SiteFooter() {
             <div className="footer-column" key={column.heading}>
               <p className="footer-column-heading">{column.heading}</p>
               <ul>
-                {column.links.map((link) => (
-                  <li key={link}>
-                    <a href="#top">{link}</a>
+                {column.links.map((link) => {
+                  const item = typeof link === "string" ? { label: link } : link;
+
+                  return <li key={item.label}>
+                    <a href={item.href || "#top"}>{item.label}</a>
                   </li>
-                ))}
+                })}
               </ul>
             </div>
           ))}

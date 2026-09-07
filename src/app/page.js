@@ -14,7 +14,7 @@ const companyPillars = [
 ];
 
 const services = [
-  { title: "End to End Development", text: "From discovery and architecture to launch and support — we own the full build so you can stay focused on the business." },
+  { title: "End to End Development", text: "From discovery and architecture to launch and support — we own the full build so you can stay focused on the business.", href: "/end-to-end-development" },
   { title: "Team Augmentation", text: "Embed vetted senior engineers directly into your team — aligned to your stack, your sprint cadence, and your culture." },
   { title: "MVP Service", text: "Get a lean, launch-ready product in weeks, not months — built to validate your idea with real users and real data." },
   { title: "Enterprise Solution", text: "Modernize legacy systems, integrate platforms, and build infrastructure that scales with strict security and compliance needs." },
@@ -81,7 +81,7 @@ export default function Home() {
 }
 
 function SectionIntro({ eyebrow, heading, text }) { return <div className="section-intro section-intro--center"><p className="section-eyebrow">{eyebrow}</p><h2 className="section-heading">{heading}</h2><p>{text}</p></div>; }
-function ServiceCard({ number, service }) { return <article className="service-card"><div><span>{number}</span><h3>{service.title}</h3></div><p>{service.text}</p><a href="#services">Explore the services <Arrow /></a></article>; }
+function ServiceCard({ number, service }) { return <article className="service-card"><div><span>{number}</span><h3>{service.title}</h3></div><p>{service.text}</p><a href={service.href || "#services"}>Explore the services <Arrow /></a></article>; }
 function IndustryIcon({ name }) {
   const common = { fill: "none", stroke: "currentColor", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2.2 };
   const icons = {
