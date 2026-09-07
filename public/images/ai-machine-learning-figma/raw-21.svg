@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="tablet_android">
+<mask id="mask0_0_461" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
+<rect id="Bounding box" width="28" height="28" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_0_461)">
+<path id="tablet_android_2" d="M5.83333 26.8333C5.19167 26.8333 4.64236 26.6049 4.18542 26.1479C3.72847 25.691 3.5 25.1417 3.5 24.5V3.5C3.5 2.85833 3.72847 2.30903 4.18542 1.85208C4.64236 1.39514 5.19167 1.16667 5.83333 1.16667H22.1667C22.8083 1.16667 23.3576 1.39514 23.8146 1.85208C24.2715 2.30903 24.5 2.85833 24.5 3.5V24.5C24.5 25.1417 24.2715 25.691 23.8146 26.1479C23.3576 26.6049 22.8083 26.8333 22.1667 26.8333H5.83333ZM5.83333 21V24.5H22.1667V21H5.83333ZM11.6667 23.3333H16.3333V22.1667H11.6667V23.3333ZM5.83333 18.6667H22.1667V7H5.83333V18.6667ZM5.83333 4.66667H22.1667V3.5H5.83333V4.66667Z" fill="#DE1F26"/>
+</g>
+</g>
+</svg>

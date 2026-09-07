@@ -1,6 +1,6 @@
 const footerColumns = [
   { heading: "Company", links: ["About Us", "Our Process", "Contact Us"] },
-  { heading: "Services", links: [{ label: "End to End Development", href: "/end-to-end-development" }, { label: "Team Augmentation", href: "/team-augmentation" }, "MVP Service", "Enterprise Solution"] },
+  { heading: "Services", links: [{ label: "End to End Development", href: "/end-to-end-development" }, { label: "Team Augmentation", href: "/team-augmentation" }, "MVP Service", { label: "AI & Machine Learning", href: "/ai-machine-learning" }, "Enterprise Solution"] },
   { heading: "Products", links: ["Expert POS", "Expert ERP", "ExpertHRMS", "ExpertATS"] },
   { heading: "Career", links: ["Why Join Us", "Job Openings", "Submit Your Profile"] },
 ];

@@ -17,6 +17,7 @@ const services = [
   { title: "End to End Development", text: "From discovery and architecture to launch and support — we own the full build so you can stay focused on the business.", href: "/end-to-end-development" },
   { title: "Team Augmentation", text: "Embed vetted senior engineers directly into your team — aligned to your stack, your sprint cadence, and your culture.", href: "/team-augmentation" },
   { title: "MVP Service", text: "Get a lean, launch-ready product in weeks, not months — built to validate your idea with real users and real data." },
+  { title: "AI & Machine Learning", text: "AI and machine learning solutions tailored to your business needs.", href: "/ai-machine-learning" },
   { title: "Enterprise Solution", text: "Modernize legacy systems, integrate platforms, and build infrastructure that scales with strict security and compliance needs." },
 ];
 
